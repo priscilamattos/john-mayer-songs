@@ -1,0 +1,89 @@
+[
+  {
+    "id": 1,
+    "title": "Free Fallin'",
+    "album": "Where The Light Is",
+    "video": "https://www.youtube.com/embed/20Ov0cDPZy8",
+    "lyrics": "https://genius.com/John-mayer-free-fallin-live-lyrics",
+    "image": "./src/Images/john01.jpeg"
+  },
+  {
+    "id": 1,
+    "title": "Neon",
+    "album": "Room For Squares",
+    "video": "https://www.youtube.com/embed/_DfQC5qHhbo",
+    "lyrics": "https://genius.com/John-mayer-neon-lyrics"
+  },
+  {
+    "id": 2,
+    "title": "Shouldn't Matter But It Does",
+    "album": "Sob Rock",
+    "video": "https://www.youtube.com/embed/8tX6nQtujQU",
+    "lyrics": "https://genius.com/John-mayer-shouldnt-matter-but-it-does-lyrics",
+    "image": "./src/Images/john02.jpeg"
+  },
+  {
+    "id": 3,
+    "title": "Daughters",
+    "album": "Heavier Things",
+    "video": "https://www.youtube.com/embed/rZLbUIa7exE",
+    "lyrics": "https://genius.com/John-mayer-daughters-lyrics",
+    "image": "./src/Images/john03.jpeg"
+  },
+  {
+    "id": 4,
+    "title": "Your Body Is A Wonderland",
+    "album": "Room For Squares",
+    "video": "https://www.youtube.com/embed/N5EnGwXV_Pg",
+    "lyrics": "https://genius.com/John-mayer-your-body-is-a-wonderland-lyrics",
+    "image": "./src/Images/john04.jpeg"
+  },
+  {
+    "id": 5,
+    "title": "Queen of California",
+    "album": "Born and Raised",
+    "video": "https://www.youtube.com/embed/cSdjo0W4Tvs",
+    "lyrics": "https://genius.com/John-mayer-queen-of-california-lyrics",
+    "image": "./src/Images/john05.jpeg"
+  },
+  {
+    "id": 6,
+    "title": "Why Georgia",
+    "album": "Room For Squares",
+    "video": "https://www.youtube.com/embed/wYTzeLtzi00",
+    "lyrics": "https://genius.com/John-mayer-why-georgia-lyrics",
+    "image": "./src/Images/john06.jpeg"
+  },
+  {
+    "id": 7,
+    "title": "Dear Marie",
+    "album": "Paradise Valley",
+    "video": "https://www.youtube.com/embed/eZHBH1MoT3g",
+    "lyrics": "https://genius.com/John-mayer-dear-marie-lyrics",
+    "image": "./src/Images/john07.jpeg"
+  },
+  {
+    "id": 8,
+    "title": "New Light",
+    "album": "Sob Rock",
+    "video": "https://www.youtube.com/embed/mQ055hHdxbE",
+    "lyrics": "https://genius.com/John-mayer-new-light-lyrics",
+    "image": "./src/Images/john08.jpeg"
+  },
+  {
+    "id": 9,
+    "title": "Wild Blue",
+    "album": "Sob Rock",
+    "video": "https://www.youtube.com/embed/EUwynJ-WHGo",
+    "lyrics": "https://genius.com/John-mayer-wild-blue-lyrics",
+    "image": "./src/Images/john09.jpeg"
+  },
+  {
+    "id": 10,
+    "title": "Waiting On The World To Change",
+    "album": "Continuum",
+    "video": "https://www.youtube.com/embed/oBIxScJ5rlY",
+    "lyrics": "https://genius.com/John-mayer-waiting-on-the-world-to-change-lyrics",
+    "image": "./src/Images/john10.jpeg"
+  }
+]
