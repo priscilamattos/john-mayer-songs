@@ -1,12 +1,16 @@
-import "./App.css";
+import "./App.scss";
 import { useState, useEffect } from "react";
 import { getDatabase, ref, onValue } from "firebase/database";
 import firebase from "./firebase";
 import SongCard from "./Components/SongCard";
+import Header from "./Components/Header";
+import SearchBox from "./Components/SearchBox";
+import Footer from "./Components/Footer";
 
 function App() {
-  const [selectSong, setSelectSong] = useState([]);
+  const [selectedSongTitle, setSelectedSongTitle] = useState("");
   const [songList, setSongList] = useState([]);
+  const [displaySong, setDisplaySong] = useState([]);
 
   useEffect(() => {
     // create a variable that holds our database details
@@ -23,19 +27,28 @@ function App() {
     });
   }, []);
 
+  useEffect(() => {
+    if (selectedSongTitle) {
+      setDisplaySong(
+        songList.filter(({ title }) => title === selectedSongTitle)
+      );
+    }
+  }, [songList, selectedSongTitle]);
+
   return (
     <div className="App">
-      <h1>Welcome to Songs</h1>
-      <form action="submit">
-        <label htmlFor="newSong">Select a Song</label>
-        {/* attach the `handleInputChange` function to our input field */}
-        <input type="text" id="newBook" onChange={() => {}} />
-        <button>Search</button>
-        {songList.map((song) => (
-          <div>{song.title}</div>
+      <Header />
+      <SearchBox
+        songList={songList}
+        selectedSongTitle={selectedSongTitle}
+        setSelectedSongTitle={setSelectedSongTitle}
+      />
+      <div className="card-container">
+        {displaySong.map((song) => (
+          <SongCard key={song.title} song={song} />
         ))}
-        <SongCard key={""} />
-      </form>
+      </div>
+      <Footer />
     </div>
   );
 }
