@@ -3,7 +3,7 @@ const SearchBox = ({ songList, selectedSongTitle, setSelectedSongTitle }) => {
     <>
       <section className="search-container">
         <div className="searchBox wrapper">
-          <h2>WELCOME TEXT AND INSTRUCTIONS HERE</h2>
+          <h2>Please select a song below:</h2>
           <form className="searchForm" action="submit">
             <select
               value={selectedSongTitle}
