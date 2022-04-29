@@ -1,9 +1,7 @@
 const SongCard = ({ song }) => {
   console.log(song);
-
   const onLyricClick = () => {
-    console.log("run");
-    window.open(song.lyrics);
+    window.open(song.lyrics, "_blank", "noopener,noreferrer");
   };
   return (
     <div className="song-card">
