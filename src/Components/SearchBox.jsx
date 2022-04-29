@@ -1,4 +1,4 @@
-const SearchBox = ({ songList, selectedSong, setSelectedSong }) => {
+const SearchBox = ({ songList, selectedSongTitle, setSelectedSongTitle }) => {
   return (
     <>
       <section className="search-container">
@@ -6,9 +6,9 @@ const SearchBox = ({ songList, selectedSong, setSelectedSong }) => {
           <h2>WELCOME TEXT AND INSTRUCTIONS HERE</h2>
           <form className="searchForm" action="submit">
             <select
-              value={selectedSong}
+              value={selectedSongTitle}
               onChange={(e) => {
-                setSelectedSong(e.target.value);
+                setSelectedSongTitle(e.target.value);
               }}
             >
               <option value="">Please select a song</option>
