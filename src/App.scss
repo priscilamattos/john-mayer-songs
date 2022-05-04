@@ -1,0 +1,264 @@
+$primaryGreen: #78bbc6;
+$primaryPurple: #5a3159;
+$primaryWhite: #f4eef4;
+$primaryBlack: #282828;
+
+@mixin Buttons {
+  width: 15.625rem;
+  height: 2.5rem;
+  background-color: $primaryPurple;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px $primaryBlack;
+  font-size: 1.2rem;
+  font-family: "Akzidenz-Grotesk BQ", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $primaryWhite;
+  border: none;
+  cursor: pointer;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  height: auto;
+  background-image: url("./Images/background.svg");
+  font-family: "Akzidenz-Grotesk BQ", sans-serif;
+}
+
+.wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.content-container {
+  padding-bottom: 2.5rem;
+}
+
+.App {
+  text-align: center;
+  position: relative;
+  min-height: 100vh;
+
+  /*Header*/
+  .image-container {
+    position: relative;
+    z-index: 10;
+    height: 1000px;
+    width: 100%;
+    img {
+      z-index: 9;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+    .header-gradient {
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      width: 100%;
+      height: 50%;
+      background-image: linear-gradient(
+        to bottom,
+        rgba(255, 0, 0, 0),
+        $primaryGreen
+      );
+      .main-title {
+        color: $primaryWhite;
+        font-size: 4rem;
+        text-shadow: 5px 4px 2px $primaryPurple;
+        text-transform: uppercase;
+        font-style: italic;
+      }
+      .header-subtitle {
+        font-size: 1.5rem;
+        color: $primaryWhite;
+        text-shadow: 2px 2px 2px $primaryPurple;
+      }
+    }
+  }
+
+  /*SearchBox */
+  .searchForm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    select {
+      width: 40rem;
+      height: 2.8rem;
+      border: 2px solid $primaryPurple;
+      background-color: $primaryWhite;
+      font-size: 1.2rem;
+      option:after {
+        font-size: 1.2rem;
+      }
+    }
+  }
+  .search-container {
+    display: flex;
+    align-items: center;
+    background-color: $primaryGreen;
+    box-shadow: 6px 6px 2px $primaryPurple;
+    height: 15rem;
+    padding: 0.625rem;
+  }
+  h2 {
+    color: $primaryWhite;
+    font-size: 2rem;
+    font-family: "Akzidenz-Grotesk BQ", sans-serif;
+    text-shadow: 2px 2px 2px $primaryPurple;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  input[type="text"] {
+    width: 26.625rem;
+    height: 2.3rem;
+    padding: 0;
+  }
+  button {
+    @include Buttons();
+  }
+}
+/*Song Card */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 100px auto;
+  .song-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 60%;
+    height: 40rem;
+    margin: 1.563rem 0;
+    background-color: $primaryWhite;
+    border: 3px solid $primaryGreen;
+    box-shadow: 10px 10px $primaryPurple;
+
+    h3 {
+      color: $primaryPurple;
+      text-transform: uppercase;
+      margin: 20px auto;
+      font-size: 1.5rem;
+    }
+    p {
+      font-weight: 500;
+      font-size: 1rem;
+      font-style: italic;
+      color: $primaryPurple;
+      margin-top: 0;
+    }
+  }
+  .btn-container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    button {
+      @include Buttons();
+      transition: transform 250ms;
+      &:hover {
+        transform: translateY(-5px);
+      }
+    }
+  }
+}
+
+/*Footer*/
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+  margin-top: 20px;
+  background-color: $primaryPurple;
+  color: $primaryWhite;
+  h4 {
+    padding: 10px;
+    text-align: center;
+    margin: 0;
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 981px) and (max-width: 1280px) {
+  .wrapper {
+    width: 100%;
+  }
+  .header-subtitle {
+    width: 90%;
+    padding: 10px;
+  }
+  .card-container {
+    .song-card {
+      width: 70%;
+    }
+  }
+  iframe {
+    width: 95%;
+    height: 100%;
+  }
+}
+
+@media (min-width: 691px) and (max-width: 980px) {
+  .header-subtitle {
+    width: 90%;
+    padding: 10px;
+  }
+  .card-container {
+    .song-card {
+      width: 90%;
+    }
+  }
+}
+
+@media (max-width: 690px) {
+  .search-container {
+    height: auto;
+    box-shadow: none;
+    padding: 0;
+    .searchBox {
+      h2 {
+        font-size: 1.2rem;
+      }
+    }
+    .searchForm {
+      select {
+        width: 900%;
+      }
+    }
+  }
+  .header-subtitle {
+    width: 90%;
+    padding: 10px;
+  }
+  .card-container {
+    .song-card {
+      width: 100%;
+      border: none;
+      box-shadow: none;
+    }
+  }
+}
+
+@media (max-width: 590px) {
+  iframe {
+    width: 90%;
+  }
+}
+
+@keyframes button {
+  0% {
+    transition: all 0.25s ease-in-out;
+  }
+  100% {
+    transition: all 0.25s ease-in-out;
+  }
+}
