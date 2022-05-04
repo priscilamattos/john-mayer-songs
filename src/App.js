@@ -1,11 +1,13 @@
-import "./App.scss";
-import { useState, useEffect } from "react";
-import { getDatabase, ref, onValue } from "firebase/database";
-import firebase from "./firebase";
-import SongCard from "./Components/SongCard";
+import { getDatabase, onValue, ref } from "firebase/database";
+import { useEffect, useState } from "react";
+
+import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import SearchBox from "./Components/SearchBox";
-import Footer from "./Components/Footer";
+import SongCard from "./Components/SongCard";
+import firebase from "./firebase";
+
+import "./App.scss";
 
 function App() {
   const [selectedSongTitle, setSelectedSongTitle] = useState("");
@@ -29,6 +31,7 @@ function App() {
 
   useEffect(() => {
     if (selectedSongTitle) {
+      //Filter the selected song in database before displaying it
       setDisplaySong(
         songList.filter(({ title }) => title === selectedSongTitle)
       );
