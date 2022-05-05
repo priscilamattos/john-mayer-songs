@@ -31,7 +31,7 @@ function App() {
 
   useEffect(() => {
     if (selectedSongTitle) {
-      //Filter the selected song in database before displaying it
+      //Filter the selected song before displaying it
       setDisplaySong(
         songList.filter(({ title }) => title === selectedSongTitle)
       );
