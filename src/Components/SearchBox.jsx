@@ -11,13 +11,13 @@ const SearchBox = ({ songList, selectedSongTitle, setSelectedSongTitle }) => {
                 setSelectedSongTitle(e.target.value);
               }}
             >
-              <option value="" disabled>
+              <option value="" hidden>
                 Please select a song
               </option>
 
-              {songList.map((song) => (
-                <option key={song.title} value={song.title}>
-                  {song.title}
+              {songList.map(({ title }) => (
+                <option key={title} value={title}>
+                  {title}
                 </option>
               ))}
             </select>
