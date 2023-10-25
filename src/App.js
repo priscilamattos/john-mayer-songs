@@ -19,11 +19,15 @@ function App() {
     const database = getDatabase(firebase);
 
     // we then create a variable that makes reference to our database
-    const dbRef = ref(database);
+    const dbRef = ref(database, "/");
 
     // add an event listener to that variable that will fire
     // from the database, and call that data 'response'.
+    console.log(11111);
+    console.log(firebase);
+    console.log(dbRef);
     onValue(dbRef, (response) => {
+      console.log(response);
       // here we use Firebase's .val() method to parse our database info the way we want it
       setSongList(response.val());
     });
